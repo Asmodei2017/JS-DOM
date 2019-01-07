@@ -4,6 +4,8 @@
 - [работа с атрибутами](#АТРИБУТЫ)
 - [dom-свойства](# DOM-СВОЙСТВА)
 - [работа с классами](#КЛАССЫ)
+- [Объект CSSStyleDeclaration](#Объект CSSStyleDeclaration)
+  - [CSS переменные](#CSS_variables)
 - [создание и вставка DOM узлов](#DOM-УЗЛЫ)
 - [удаление узлов](#Удаление)
 
@@ -77,7 +79,40 @@
 
 ------------
 
+### Объект_CSSStyleDeclaration
 
+[почитать](#https://medium.com/@lucyhackwrench/%D1%87%D1%82%D0%BE-%D0%B7%D0%B0-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82-cssstyledeclaration-%D0%B8-%D0%BE%D1%82%D0%BA%D1%83%D0%B4%D0%B0-%D0%BE%D0%BD-%D0%B1%D0%B5%D1%80%D0%B5%D1%82%D1%81%D1%8F-9fbee0c634ca)
+Объект CSSStyleDeclaration — это объект, который возвращается, когда мы хотим получить значение стиля из JS
+
+Объект CSSStyleDeclaration 
+свойства:
+
+CSSStyleDeclaration.cssText - возвращает/устанавливает текстовое представление CSS стиля.
+CSSStyleDeclaration.length - возвращает КОЛИЧЕСВО стилей CSS.
+CSSStyleDeclaration.parentRule - возвращает CssRule медиа-запроса CSS.
+
+методы:
+
+**CSSStyleDeclaration.getPropertyPriority()** - возвращает значение флага important
+**CSSStyleDeclaration.getPropertyValue()** - возвращает значение свойства
+**CSSStyleDeclaration.item()** - возвращает имя свойства
+**CSSStyleDeclaration.removeProperty()** - удаляет свойство из CSS Declaration Block
+**CSSStyleDeclaration.setProperty()** - меняет существующее или создает новое свойство
+
+### CSS_variables
+Стандартными методами получения/установки переменных CSS3 являются .setProperty() и .getPropertyValue().
+Если переменные являются глобальными (объявлено в :root), то можно использовать следующее для получения и установки своих значений.
+
+```javascript
+// setter
+document.documentElement.style.setProperty('--myVariable', 'blue'); 
+// параметры метода setProperty (СSS-переменная , новое значение)
+
+// getter
+document.documentElement.style.getPropertyValue('--myVariable');
+```
+
+------------
 ### DOM-УЗЛЫ
 
 #### Создание.
