@@ -4,7 +4,7 @@
 - [работа с атрибутами](#АТРИБУТЫ)
 - [dom-свойства](#DOM-СВОЙСТВА)
 - [работа с классами](#КЛАССЫ)
-- [Объект CSSStyleDeclaration](#Объект CSSStyleDeclaration)
+- [Объект CSSStyleDeclaration](#Объект_CSSStyleDeclaration)
   - [CSS переменные](#CSS_variables)
 - [создание и вставка DOM узлов](#DOM-УЗЛЫ)
 - [удаление узлов](#Удаление)
