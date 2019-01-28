@@ -40,12 +40,15 @@
 ### АТРИБУТЫ
 
 #### Работа с атрибутами тегов HTML
+Атрибут это ключ объекта, поэтому можно обращатья/изменять значения к атрибуту по синтаксису объект.ключ
 
 `elem.hasAttribute(name)`	Проверяет наличие аттрибута, `ВОЗВРАЩАЕТ TRUE/FALSE`
 
 `elem.getAttribute(name)`	ПОЛУЧАЕТ значение атрибута и возвращает его
 
 `elem.setAttribute(name, value)`	УСТАНАВЛИВАЕТ атрибут
+
+`elem.attr = '...'`  обращаемся по ключу и устанавлива
 
 `elem.removeAttribute(name)`	УДАЛЯЕТ атрибут
 
@@ -78,6 +81,8 @@
 `elem.classList.remove(cls)`	удаляет класс cls в значение атрибута class="" элемента 
 
 `elem.classList.toggle(cls)`	если класса cls нет, добавляет его, если есть - удаляет.
+
+`elem.classList.length`	 считает количество классов у елемента
 
 ------------
 
@@ -195,6 +200,11 @@ elem.insertAdjacentText(position, text);
 
  `elem.innerText`  устаревшая версия. делает тоже что и `elem.textContent`
 
+#### Клонирование елемента
+
+`elem.cloneNode()` кллонирует елемент БЕЗ СОДЕРЖИМОГО
+
+`elem.cloneNode(true)`  клонирует елемент СО ВСЕМ СОДЕРЖИМЫМ
 
 ### HTM5 DATA-АТРИБУТЫ
 
@@ -207,7 +217,7 @@ elem.insertAdjacentText(position, text);
 
 - В JavaScript обращаемся к псевдомассиву элементов input для получения значения input - elem.value
 
-- В JavaScript обращаемся к псевдомассиву элементов input для получения значения атрибута input - elem.dataset.color 
+- В JavaScript обращаемся к псевдомассиву элементов input для получения значения атрибута input - **elem.dataset.color** 
 
 ### НАВИГАЦИЯ ПО УЗЛАМ.
 
